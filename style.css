@@ -1,0 +1,257 @@
+body {
+  line-height: 1.2;
+  text-align: center;
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+.hero {
+  height: 500px;
+  background-image: url("https://paramountdestinations.com/wp-content/uploads/2018/10/sunset-golf-ball-1500x609.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 40px;
+  padding-top: 180px;
+  margin-top: 0;
+  color: white;
+}
+
+/* carousel */
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px; /* remove scrollbar space */
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+#wrapper {
+  max-width: 100%;
+  padding: 50px 75px 50px 45px;
+  position: relative;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#wrapper-2 {
+  max-width: 100%;
+  padding: 50px 75px 50px 45px;
+  position: relative;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+.title {
+  color: #eee;
+}
+
+.module-section {
+  max-width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+#content {
+  width: 600em;
+  list-style-type: none;
+  position: relative;
+}
+
+#article-container {
+  position: relative;
+}
+
+#content:nth-of-type(1) {
+  margin-top: 20px;
+}
+
+.title {
+  content: "";
+  background-color: rgba(49, 158, 6, 0.6);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 2%;
+  width: 100%;
+  height: 3px;
+  z-index: 0;
+}
+
+.title-span {
+  color: #000;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: 2px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  z-index: 1;
+  margin-top: -15px;
+  background-color: rgb(49, 158, 6);
+  width: 200px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  width: 20em;
+  height: 430px;
+  background: #fff;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  transform: scale(1);
+  visibility: visible;
+  -moz-box-shadow: 0px 1px 5px 0px #676767;
+  -webkit-box-shadow: 0px 1px 5px 0px #676767;
+  box-shadow: 0px 1px 5px 0px #676767;
+}
+
+.card:hover {
+  visibility: visible;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+  position: relative;
+  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  transition-duration: 400ms;
+  -moz-box-shadow: 0px 1px 15px 0px #666666;
+  -webkit-box-shadow: 0px 1px 15px 0px #666666;
+  box-shadow: 0px 1px 15px 0px #666666;
+  margin-top: -5px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.inside-top {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.inside-top img {
+  padding-bottom: 10px;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+/* carousel end */
+
+.slider-container {
+  padding: 0 0 0 30px;
+  margin-top: 17px;
+  height: 400px;
+}
+
+.carousel-item img {
+  height: 398px;
+}
+
+.table-title {
+  font-size: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 5px;
+  margin-top: 20px;
+}
+
+.tournaments-container {
+  background-color: #fff;
+  overflow: scroll;
+  height: 400px;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.table {
+  cursor: default;
+  width: 100%;
+  /* background-color: rgba(188, 226, 190, 0.8); */
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.font-title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.copyright {
+  padding: 20px;
+  background-color: rgb(20, 41, 10);
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .articles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .single-article {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media (max-width: 500px) {
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .articles {
+    grid-template-columns: 1fr;
+  }
+  .single-article {
+    height: 300px;
+    width: 300px;
+  }
+}
